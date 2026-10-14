@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="100" viewBox="0 0 470 100" fill="none" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">Maison Lumière — French Cuisine</title>
+  <desc id="logo-description">A gold four-point light star beside the Maison Lumière wordmark and French Cuisine subtitle.</desc>
+  <defs>
+    <linearGradient id="vertical-beam" x1="42" y1="14" x2="42" y2="86" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D4AF37" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="horizontal-beam" x1="6" y1="50" x2="78" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D4AF37" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="star-glow" x="24" y="32" width="36" height="36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+  <path d="M42 14V86" stroke="url(#vertical-beam)" stroke-width="2"/>
+  <path d="M6 50H78" stroke="url(#horizontal-beam)" stroke-width="2"/>
+  <rect x="34" y="42" width="16" height="16" transform="rotate(45 42 50)" fill="#D4AF37" opacity=".48" filter="url(#star-glow)"/>
+  <rect x="36.5" y="44.5" width="11" height="11" transform="rotate(45 42 50)" fill="#D4AF37"/>
+  <text x="100" y="51" fill="#F6F2E9" font-family="'Playfair Display', Georgia, serif" font-size="36" font-weight="400" letter-spacing=".2">Maison Lumière</text>
+  <text x="101" y="77" fill="#C5A059" font-family="Montserrat, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="3.4">FRENCH CUISINE</text>
+</svg>

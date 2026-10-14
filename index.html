@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2e9">
+  <meta name="description" content="Maison Lumière — French cooking, made with the seasons and meant to be shared.">
+  <title>Maison Lumière — A French table, warmly set</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+      <a class="brand" href="#top" aria-label="Maison Lumière home">
+        <img class="brand-logo" src="maison-lumiere-logo.svg" alt="Maison Lumière — French Cuisine">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Toggle navigation</span>
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="#story">Our story</a>
+      <a href="#our-food">Our food</a>
+      <a href="#location">Find us</a>
+      <a class="nav-booking" href="#reserve">Book a table <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> A neighbourhood table, with a French heart</p>
+        <h1>Make room<br>for <em>something</em><br><em>delicious.</em></h1>
+        <p class="hero-description">A little butter, a lot of care, and one more glass of wine. Welcome to our corner of the French table.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#our-food">Discover our table <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#story">A note from our kitchen <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hero-footnote"><span class="logo-star hero-star" aria-hidden="true"><span></span></span> Cooked slowly. Shared generously.</div>
+      </div>
+      <div class="hero-image" role="img" aria-label="A freshly prepared dish with herbs and golden roasted vegetables">
+        <div class="image-caption"><span>THE MARKET TABLE</span></div>
+        <div class="round-stamp" aria-hidden="true"><span>fait avec</span><strong>♥</strong><span>beaucoup d'amour</span></div>
+      </div>
+      <a class="scroll-cue" href="#story"><span>Scroll to savour</span><span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="intro section-wrap" id="story">
+      <div class="section-kicker"><span>01</span><span>BIENVENUE CHEZ NOUS</span></div>
+      <div class="intro-copy">
+        <p class="eyebrow">The story of Maison Lumière</p>
+        <h2>A neighbourhood<br><em>French table.</em></h2>
+        <p>Maison Lumière is a neighbourhood French restaurant built around the pleasure of gathering. Our room takes its cue from Parisian bistros: warm light, an unhurried table, and a welcome that makes every guest feel at home. Our team pairs thoughtful service with the rituals of French dining—a good apéritif, fresh bread to share, seasonal dishes inspired by regional classics, and time for one more conversation. Whether it’s a weekday supper or a special occasion, there’s always room at our table.</p>
+        <a class="text-link" href="#reserve">Join us around the table <span aria-hidden="true">→</span></a>
+      </div>
+      <figure class="story-photo">
+        <img src="images/chef-portrait.jpg" alt="A chef welcoming guests to the Maison Lumière table" loading="lazy">
+        <figcaption><span>Bienvenue chez nous</span><span>WELCOME TO OUR TABLE</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="menu-preview" id="our-food">
+      <div class="section-wrap">
+        <div class="section-kicker section-kicker-light"><span>02</span><span>QUELQUE CHOSE DE BON</span></div>
+        <div class="menu-heading">
+          <div>
+            <p class="eyebrow">A little taste of our table</p>
+            <h2>French flavours,<br><em>made to share.</em></h2>
+          </div>
+          <p>Seasonal French favourites, thoughtfully made for lingering. Here are a few flavours from our kitchen.</p>
+        </div>
+        <div class="menu-preview-grid">
+          <article class="menu-preview-card" data-preview-description="A French classic from the land, prepared for a relaxed meal at Maison Lumière.">
+            <img src="images/index_img-7.jpg" alt="A beautifully plated grilled main course" loading="lazy">
+            <span class="menu-preview-label">LES CLASSIQUES · FROM THE LAND</span>
+          </article>
+          <article class="menu-preview-card" data-preview-description="Seasonal garden vegetables, thoughtfully prepared with French herbs.">
+            <img src="images/index_img-8.jpg" alt="A colorful plate of seasonal vegetables" loading="lazy">
+            <span class="menu-preview-label">DU JARDIN · FROM THE GARDEN</span>
+          </article>
+          <article class="menu-preview-card" data-preview-description="Fresh seafood and comforting pasta, simply prepared for the table.">
+            <img src="images/index_img-9.jpg" alt="A seafood dish with mussels and pasta" loading="lazy">
+            <span class="menu-preview-label">DE LA MER · FROM THE SEA</span>
+          </article>
+        </div>
+        <div class="menu-preview-actions">
+          <a class="button button-menu" href="#reserve">Book a table <span aria-hidden="true">→</span></a>
+          <a class="button button-menu button-menu-secondary" href="#location">Find us <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise section-wrap" id="visit">
+      <div class="promise-photo">
+        <img src="images/index-3_img-1.jpg" alt="A dish being brought to the table" loading="lazy">
+        <span class="photo-label">THE PLEASURE IS IN THE SHARING</span>
+      </div>
+      <div class="promise-copy">
+        <div class="section-kicker"><span>03</span><span>À VOTRE SANTÉ</span></div>
+        <p class="eyebrow">The little things are the big things</p>
+        <h2>Stay for one.<br><em>Stay for hours.</em></h2>
+        <p>Come for a quick bite, settle in for the evening, or bring everyone you love. However you arrive, there's a place for you here.</p>
+        <div class="promise-details">
+          <div><span class="logo-star detail-icon" aria-hidden="true"><span></span></span><span>Season-led cooking<br><small>Fresh from the market, every day</small></span></div>
+          <div><span class="logo-star detail-icon" aria-hidden="true"><span></span></span><span>Room for everyone<br><small>Little tables, long lunches, big occasions</small></span></div>
+        </div>
+        <a class="text-link" href="#reserve">Save yourself a seat <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="location-section" id="location">
+      <div class="location-inner">
+        <div class="location-copy">
+          <div class="section-kicker"><span>04</span><span>VENEZ NOUS VOIR</span></div>
+          <p class="eyebrow">Your table, right this way</p>
+          <h2>Where we are.</h2>
+          <p class="location-address">Net One Center<br>3rd Avenue corner 26th Street<br>Bonifacio Global City, Taguig</p>
+          <p class="location-note">Find us in the heart of BGC. We look forward to welcoming you.</p>
+          <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Net+One+Center%2C+3rd+Avenue+corner+26th+Street%2C+Bonifacio+Global+City%2C+Taguig" target="_blank" rel="noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="location-map">
+          <iframe title="Map showing Net One Center in Bonifacio Global City, Taguig" src="https://maps.google.com/maps?q=Net%20One%20Center%2C%203rd%20Avenue%20corner%2026th%20Street%2C%20Bonifacio%20Global%20City%2C%20Taguig&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation" id="reserve">
+      <div class="reservation-inner">
+        <div class="reservation-copy">
+          <p class="eyebrow">Your table is waiting</p>
+          <h2>Shall we<br><em>save you a seat?</em></h2>
+          <p>Tell us when you'd like to come by. We’ll be delighted to have you.</p>
+          <div class="reservation-aside"><span class="logo-star reservation-star" aria-hidden="true"><span></span></span><span>Good things take time.<br><small>So does a lovely dinner.</small></span></div>
+        </div>
+        <form class="reservation-form">
+          <div class="form-row">
+            <label>Your name<input name="name" type="text" autocomplete="name" placeholder="How shall we call you?" required></label>
+            <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+          </div>
+          <div class="form-row">
+            <label>Date<input name="date" type="date" required></label>
+            <label>Time<select name="time" required><option value="" disabled selected>Choose a time</option><option>12:00</option><option>12:30</option><option>13:00</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option></select></label>
+          </div>
+          <label>Number of guests<select name="guests" required><option value="" disabled selected>Select your party</option><option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4 guests</option><option>5 guests</option><option>6 guests</option></select></label>
+          <button class="button button-light" type="submit">Request a table <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top" aria-label="Maison Lumière home">
+      <img class="brand-logo" src="maison-lumiere-logo.svg" alt="Maison Lumière — French Cuisine">
+    </a>
+    <p>À table, et que la fête commence.</p>
+    <a href="#top" class="back-top">Back to the top <span aria-hidden="true">↑</span></a>
+    <small class="copyright">© <span id="year"></span> Maison Lumière</small>
+  </footer>
+  <div class="order-toast reservation-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
