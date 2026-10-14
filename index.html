@@ -15,7 +15,8 @@
 <body>
   <header class="site-header">
       <a class="brand" href="#top" aria-label="Maison Lumière home">
-        <img class="brand-logo" src="maison-lumiere-logo.svg" alt="Maison Lumière — French Cuisine">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span class="brand-name">Maison Lumière<small>French Cuisine</small></span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="sr-only">Toggle navigation</span>
@@ -23,7 +24,8 @@
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="#story">Our story</a>
-      <a href="#our-food">Our food</a>
+      <a href="menu.html">Menu</a>
+      <a href="menu.html#order-summary">Order</a>
       <a href="#location">Find us</a>
       <a class="nav-booking" href="#reserve">Book a table <span aria-hidden="true">↗</span></a>
     </nav>
@@ -36,7 +38,7 @@
         <h1>Make room<br>for <em>something</em><br><em>delicious.</em></h1>
         <p class="hero-description">A little butter, a lot of care, and one more glass of wine. Welcome to our corner of the French table.</p>
         <div class="hero-actions">
-          <a class="button button-dark" href="#our-food">Discover our table <span aria-hidden="true">→</span></a>
+          <a class="button button-dark" href="menu.html#menu">Order from the menu <span aria-hidden="true">→</span></a>
           <a class="text-link" href="#story">A note from our kitchen <span aria-hidden="true">↘</span></a>
         </div>
         <div class="hero-footnote"><span class="logo-star hero-star" aria-hidden="true"><span></span></span> Cooked slowly. Shared generously.</div>
@@ -62,33 +64,33 @@
       </figure>
     </section>
 
-    <section class="menu-preview" id="our-food">
+    <section class="menu-preview" id="menu">
       <div class="section-wrap">
         <div class="section-kicker section-kicker-light"><span>02</span><span>QUELQUE CHOSE DE BON</span></div>
         <div class="menu-heading">
           <div>
-            <p class="eyebrow">A little taste of our table</p>
-            <h2>French flavours,<br><em>made to share.</em></h2>
+            <p class="eyebrow">A proper look at our table</p>
+            <h2>A taste of<br><em>the menu.</em></h2>
           </div>
-          <p>Seasonal French favourites, thoughtfully made for lingering. Here are a few flavours from our kitchen.</p>
+          <p>French favourites, made for lingering. Explore the full carte, from a little something to start to one last sweet bite.</p>
         </div>
         <div class="menu-preview-grid">
-          <article class="menu-preview-card" data-preview-description="A French classic from the land, prepared for a relaxed meal at Maison Lumière.">
+          <a class="menu-preview-card" href="menu.html#mains" data-preview-description="A French classic from the land, prepared for a relaxed meal at Maison Lumière.">
             <img src="images/index_img-7.jpg" alt="A beautifully plated grilled main course" loading="lazy">
             <span class="menu-preview-label">LES CLASSIQUES · FROM THE LAND</span>
-          </article>
-          <article class="menu-preview-card" data-preview-description="Seasonal garden vegetables, thoughtfully prepared with French herbs.">
+          </a>
+          <a class="menu-preview-card" href="menu.html#vegetarian" data-preview-description="Seasonal garden vegetables, thoughtfully prepared with French herbs.">
             <img src="images/index_img-8.jpg" alt="A colorful plate of seasonal vegetables" loading="lazy">
             <span class="menu-preview-label">DU JARDIN · FROM THE GARDEN</span>
-          </article>
-          <article class="menu-preview-card" data-preview-description="Fresh seafood and comforting pasta, simply prepared for the table.">
+          </a>
+          <a class="menu-preview-card" href="menu.html#seafood" data-preview-description="Fresh seafood and comforting pasta, simply prepared for the table.">
             <img src="images/index_img-9.jpg" alt="A seafood dish with mussels and pasta" loading="lazy">
             <span class="menu-preview-label">DE LA MER · FROM THE SEA</span>
-          </article>
+          </a>
         </div>
         <div class="menu-preview-actions">
-          <a class="button button-menu" href="#reserve">Book a table <span aria-hidden="true">→</span></a>
-          <a class="button button-menu button-menu-secondary" href="#location">Find us <span aria-hidden="true">→</span></a>
+          <a class="button button-menu" href="menu.html#order-summary">Order now <span aria-hidden="true">→</span></a>
+          <a class="button button-menu button-menu-secondary" href="menu.html">Explore the full menu <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -153,7 +155,8 @@
 
   <footer class="site-footer">
     <a class="brand footer-brand" href="#top" aria-label="Maison Lumière home">
-      <img class="brand-logo" src="maison-lumiere-logo.svg" alt="Maison Lumière — French Cuisine">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span class="brand-name">Maison Lumière<small>French Cuisine</small></span>
     </a>
     <p>À table, et que la fête commence.</p>
     <a href="#top" class="back-top">Back to the top <span aria-hidden="true">↑</span></a>
