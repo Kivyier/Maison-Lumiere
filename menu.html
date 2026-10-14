@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2e9">
+  <meta name="description" content="Explore the Maison Lumière menu: French bistro favourites, seasonal plates, desserts, and drinks.">
+  <title>Our Menu — Maison Lumière</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Maison Lumière home">
+      <img class="brand-logo" src="maison-lumiere-logo.svg" alt="Maison Lumière — French Cuisine">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Toggle navigation</span>
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html#story">Our story</a>
+      <a href="menu.html" aria-current="page">Menu</a>
+      <a href="#order-summary">Your order</a>
+      <a href="index.html#location">Find us</a>
+      <a class="nav-booking" href="index.html#reserve">Book a table <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu-page-hero" id="top">
+      <div class="menu-page-hero-copy">
+        <p class="eyebrow">MAISON LUMIÈRE · BGC, TAGUIG</p>
+        <h1>Our menu.<br><em>La carte.</em></h1>
+        <p>French favourites, seasonal ingredients, and something lovely for every course.</p>
+        <a class="button button-dark" href="#starters">Browse the menu <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="menu-page-hero-image" role="img" aria-label="A seafood dish with pasta, herbs, and mussels"></div>
+    </section>
+
+    <section class="menu-section menu-page-section" id="menu">
+      <div class="section-wrap">
+        <div class="section-kicker section-kicker-light"><span>02</span><span>QUELQUE CHOSE DE BON</span></div>
+        <div class="menu-heading">
+          <div>
+            <p class="eyebrow">Made for sharing and staying awhile</p>
+            <h2>From first bite<br><em>to last sip.</em></h2>
+          </div>
+          <p>Discover the full Maison Lumière carte. Every dish is prepared with care and inspired by the seasons.</p>
+        </div>
+        <div class="menu-category-picker">
+          <label class="sr-only" for="menu-category-select">Choose a menu category</label>
+          <select id="menu-category-select" aria-label="Choose a menu category">
+            <option value="#menu">Savor all</option>
+            <option value="#starters">To begin</option>
+            <option value="#mains">From the land</option>
+            <option value="#seafood">From the sea</option>
+            <option value="#vegetarian">From the garden</option>
+            <option value="#desserts">Something sweet</option>
+            <option value="#drinks">To drink</option>
+          </select>
+          <span aria-hidden="true">⌄</span>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-category" id="starters">
+            <p class="menu-category-label">01 <span>À PARTAGER</span></p>
+            <h3>To begin</h3>
+            <p class="menu-category-intro">A little something for the table.</p>
+            <ul class="menu-list">
+              <li><div><h4>Soupe à l’oignon gratinée</h4><p>Slow-cooked onion, toasted baguette, Gruyère</p></div><span class="menu-price">₱480</span></li>
+              <li><div><h4>Escargots de Bourgogne</h4><p>Garlic-parsley butter, warm baguette</p></div><span class="menu-price">₱760</span></li>
+              <li><div><h4>Pâté de campagne</h4><p>Country pâté, cornichons, toasted sourdough</p></div><span class="menu-price">₱680</span></li>
+              <li><div><h4>Salade de chèvre chaud</h4><p>Warm goat cheese, market leaves, honey vinaigrette</p></div><span class="menu-price">₱720</span></li>
+            </ul>
+          </article>
+          <article class="menu-category" id="mains">
+            <p class="menu-category-label">02 <span>LES CLASSIQUES</span></p>
+            <h3>From the land</h3>
+            <p class="menu-category-intro">Comforting French favourites, cooked slowly.</p>
+            <ul class="menu-list">
+              <li><div><h4>Boeuf bourguignon</h4><p>Red wine-braised beef, pommes purée</p></div><span class="menu-price">₱1,280</span></li>
+              <li><div><h4>Coq au vin</h4><p>Chicken braised in red wine, lardons, mushrooms</p></div><span class="menu-price">₱1,150</span></li>
+              <li><div><h4>Steak frites</h4><p>Grilled sirloin, crisp fries, peppercorn butter</p></div><span class="menu-price">₱1,450</span></li>
+              <li><div><h4>Confit de canard</h4><p>Slow-cooked duck leg, Lyonnaise potatoes</p></div><span class="menu-price">₱1,380</span></li>
+            </ul>
+          </article>
+          <article class="menu-category" id="seafood">
+            <p class="menu-category-label">03 <span>DE LA MER</span></p>
+            <h3>From the sea</h3>
+            <p class="menu-category-intro">Fresh catch, simply and thoughtfully prepared.</p>
+            <ul class="menu-list">
+              <li><div><h4>La pêche du jour</h4><p>Market fish, lemon beurre blanc, greens</p></div><span class="menu-price">₱1,250</span></li>
+              <li><div><h4>Moules marinières</h4><p>Mussels, white wine, shallots, fries</p></div><span class="menu-price">₱1,080</span></li>
+              <li><div><h4>Saumon rôti</h4><p>Roasted salmon, herbed potatoes, dill crème</p></div><span class="menu-price">₱1,180</span></li>
+              <li><div><h4>Crevettes à l’ail</h4><p>Garlic prawns, parsley, grilled country bread</p></div><span class="menu-price">₱1,350</span></li>
+            </ul>
+          </article>
+          <article class="menu-category" id="vegetarian">
+            <p class="menu-category-label">04 <span>DU JARDIN</span></p>
+            <h3>From the garden</h3>
+            <p class="menu-category-intro">Seasonal plates with the garden in mind.</p>
+            <ul class="menu-list">
+              <li><div><h4>Ratatouille provençale</h4><p>Slow-baked market vegetables, herbs, sourdough</p></div><span class="menu-price">₱820</span></li>
+              <li><div><h4>Risotto aux champignons</h4><p>Wild mushrooms, thyme, aged Parmesan</p></div><span class="menu-price">₱880</span></li>
+              <li><div><h4>Gratin dauphinois</h4><p>Potatoes, cream, garlic, golden Gruyère</p></div><span class="menu-price">₱760</span></li>
+              <li><div><h4>Salade niçoise</h4><p>Green beans, olives, egg, tomato, Dijon dressing</p></div><span class="menu-price">₱780</span></li>
+            </ul>
+          </article>
+          <article class="menu-category" id="desserts">
+            <p class="menu-category-label">05 <span>DOUCEURS</span></p>
+            <h3>Something sweet</h3>
+            <p class="menu-category-intro">There is always room for dessert.</p>
+            <ul class="menu-list">
+              <li><div><h4>Crème brûlée</h4><p>Vanilla custard, crisp caramel top</p></div><span class="menu-price">₱420</span></li>
+              <li><div><h4>Tarte Tatin</h4><p>Caramelised apple tart, crème fraîche</p></div><span class="menu-price">₱480</span></li>
+              <li><div><h4>Mousse au chocolat</h4><p>Dark chocolate, a pinch of sea salt</p></div><span class="menu-price">₱450</span></li>
+              <li><div><h4>Assiette de fromages</h4><p>French cheeses, seasonal preserves</p></div><span class="menu-price">₱680</span></li>
+            </ul>
+          </article>
+          <article class="menu-category" id="drinks">
+            <p class="menu-category-label">06 <span>À BOIRE</span></p>
+            <h3>To drink</h3>
+            <p class="menu-category-intro">A little something to raise a glass.</p>
+            <ul class="menu-list">
+              <li><div><h4>House wine</h4><p>Red or white, ask us what’s pouring</p></div><span class="menu-price">₱520</span></li>
+              <li><div><h4>Crémant de Loire</h4><p>French sparkling wine, by the glass</p></div><span class="menu-price">₱680</span></li>
+              <li><div><h4>Citron pressé</h4><p>Freshly squeezed lemon, sparkling or still</p></div><span class="menu-price">₱280</span></li>
+              <li><div><h4>Café crème</h4><p>Espresso with steamed milk</p></div><span class="menu-price">₱220</span></li>
+            </ul>
+          </article>
+        </div>
+        <section class="order-summary" id="order-summary" aria-labelledby="order-summary-title">
+          <p class="eyebrow">MAISON LUMIÈRE · À TABLE</p>
+          <h2 id="order-summary-title">Your order.</h2>
+          <p class="order-summary-intro">A little something for your table.</p>
+          <p class="order-empty">Your order is empty. Add a dish from the menu to begin.</p>
+          <ul class="order-items" aria-label="Items in your order"></ul>
+          <div class="order-total"><span>Total</span><strong>₱0</strong></div>
+          <p class="order-status" aria-live="polite"></p>
+          <div class="order-summary-actions">
+            <button class="order-clear" type="button">Clear order</button>
+            <button class="order-submit" type="button">Place order <span aria-hidden="true">→</span></button>
+          </div>
+        </section>
+        <a class="button button-menu menu-booking-link" href="index.html#reserve">Save a seat at our table <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="food-gallery" id="gallery">
+      <div class="section-wrap">
+        <div class="section-kicker"><span>07</span><span>UN PETIT APERÇU</span></div>
+        <div class="food-gallery-heading">
+          <div>
+            <p class="eyebrow">A little taste for the eyes</p>
+            <h2>From our kitchen<br><em>to your table.</em></h2>
+          </div>
+          <p>A glimpse of the plates, produce, and French-inspired cooking waiting for you at Maison Lumière.</p>
+        </div>
+        <div class="food-gallery-grid">
+          <figure class="food-gallery-card">
+            <img src="images/index_img-7.jpg" alt="A French dish from the Maison Lumière menu" loading="lazy">
+            <figcaption><span>01</span> From the land</figcaption>
+          </figure>
+          <figure class="food-gallery-card">
+            <img src="images/index_img-8.jpg" alt="A French dish from the Maison Lumière menu" loading="lazy">
+            <figcaption><span>02</span> From the garden</figcaption>
+          </figure>
+          <figure class="food-gallery-card">
+            <img src="images/index_img-9.jpg" alt="A French dish from the Maison Lumière menu" loading="lazy">
+            <figcaption><span>03</span> From the sea</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html" aria-label="Maison Lumière home">
+      <img class="brand-logo" src="maison-lumiere-logo.svg" alt="Maison Lumière — French Cuisine">
+    </a>
+    <p>À table, et que la fête commence.</p>
+    <a href="#top" class="back-top">Back to the top <span aria-hidden="true">↑</span></a>
+    <small class="copyright">© <span id="year"></span> Maison Lumière</small>
+  </footer>
+  <button class="order-cart-toggle" type="button" aria-controls="order-summary">
+    <span>Your order</span>
+    <span class="order-count">0</span>
+    <span class="order-cart-total">₱0</span>
+  </button>
+  <div class="order-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
