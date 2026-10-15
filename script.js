@@ -1,5 +1,5 @@
 const menuToggle = document.querySelector(".menu-toggle");
-const siteNav = document.querySelector(".site-nav");
+const siteNav = document.getElementById("site-nav");
 
 menuToggle.addEventListener("click", () => {
   const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
@@ -14,7 +14,7 @@ siteNav.addEventListener("click", (event) => {
   }
 });
 
-document.querySelector("#year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
 const menuPreview = document.querySelector(".menu-preview");
 if (menuPreview) {
@@ -96,8 +96,8 @@ if (reservationForm) {
 }
 
 const menuGrid = document.querySelector(".menu-grid");
-const orderSummary = document.querySelector("#order-summary");
-const menuCategorySelect = document.querySelector("#menu-category-select");
+const orderSummary = document.getElementById("order-summary");
+const menuCategorySelect = document.getElementById("menu-category-select");
 if (menuCategorySelect && menuGrid) {
   const menuCategories = [...menuGrid.querySelectorAll(".menu-category")];
   let categoryScrollFrame = 0;
