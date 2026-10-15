@@ -1,3 +1,4 @@
+// Toggle the shared mobile navigation and fill in the current year.
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.getElementById("site-nav");
 
@@ -18,6 +19,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 const menuPreview = document.querySelector(".menu-preview");
 if (menuPreview) {
+  // Update the menu preview description for pointer and keyboard users.
   const previewGrid = menuPreview.querySelector(".menu-preview-grid");
   const previewDescription = menuPreview.querySelector(".menu-heading > p");
   const defaultPreviewDescription = previewDescription.textContent;
@@ -48,6 +50,7 @@ if (menuPreview) {
 
 const reservationForm = document.querySelector(".reservation-form");
 if (reservationForm) {
+  // Set the earliest booking date and show feedback as details change.
   const dateInput = reservationForm.elements.date;
   const reservationToast = document.querySelector(".reservation-toast");
   const today = new Date();
@@ -98,6 +101,8 @@ if (reservationForm) {
 const menuGrid = document.querySelector(".menu-grid");
 const orderSummary = document.getElementById("order-summary");
 const menuCategorySelect = document.getElementById("menu-category-select");
+
+// Keep the selected menu category in sync with scrolling and selection.
 if (menuCategorySelect && menuGrid) {
   let categoryScrollFrame = 0;
 
@@ -156,6 +161,7 @@ if (menuCategorySelect && menuGrid) {
   updateMenuCategorySelection();
 }
 
+// Build the cart and update its items, quantities, and total.
 if (menuGrid && orderSummary) {
   const cartButton = document.querySelector(".order-cart-toggle");
   const orderToast = document.querySelector(".order-toast");
