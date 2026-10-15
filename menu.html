@@ -51,19 +51,26 @@
           </div>
           <p>Discover the full Maison Lumière carte. Every dish is prepared with care and inspired by the seasons.</p>
         </div>
-        <div class="menu-category-picker">
-          <label class="sr-only" for="menu-category-select">Choose a menu category</label>
-          <select id="menu-category-select" aria-label="Choose a menu category">
-            <option value="#menu">Savor all</option>
-            <option value="#starters">To begin</option>
-            <option value="#mains">From the land</option>
-            <option value="#seafood">From the sea</option>
-            <option value="#vegetarian">From the garden</option>
-            <option value="#desserts">Something sweet</option>
-            <option value="#drinks">To drink</option>
-          </select>
-          <span aria-hidden="true">⌄</span>
+        <div class="menu-controls">
+          <div class="menu-search">
+            <label class="sr-only" for="menu-search">Search dishes and ingredients</label>
+            <input id="menu-search" type="search" placeholder="Search dishes or ingredients" aria-describedby="menu-search-status">
+          </div>
+          <div class="menu-category-picker">
+            <label class="sr-only" for="menu-category-select">Choose a menu category</label>
+            <select id="menu-category-select" aria-label="Choose a menu category">
+              <option value="#menu">Savor all</option>
+              <option value="#starters">To begin</option>
+              <option value="#mains">From the land</option>
+              <option value="#seafood">From the sea</option>
+              <option value="#vegetarian">From the garden</option>
+              <option value="#desserts">Something sweet</option>
+              <option value="#drinks">To drink</option>
+            </select>
+            <span aria-hidden="true">⌄</span>
+          </div>
         </div>
+        <p class="menu-search-status" id="menu-search-status" role="status" aria-live="polite"></p>
         <div class="menu-grid">
           <article class="menu-category" id="starters">
             <p class="menu-category-label">01 <span>À PARTAGER</span></p>
