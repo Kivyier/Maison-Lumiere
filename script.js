@@ -98,8 +98,55 @@ if (reservationForm) {
 const menuGrid = document.querySelector(".menu-grid");
 const orderSummary = document.querySelector("#order-summary");
 const menuCategorySelect = document.querySelector("#menu-category-select");
+const menuSearch = document.querySelector("#menu-search");
+const menuSearchStatus = document.querySelector("#menu-search-status");
+const menuCategories = menuGrid
+  ? [...menuGrid.querySelectorAll(".menu-category")]
+  : [];
+const menuItems = menuGrid
+  ? [...menuGrid.querySelectorAll(".menu-list li")]
+  : [];
+
+const normalizeMenuSearchText = (value) =>
+  value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase();
+
+const updateMenuSearch = () => {
+  if (!menuSearch || !menuGrid || !menuSearchStatus) return;
+
+  const query = normalizeMenuSearchText(menuSearch.value.trim());
+  let matchingItems = 0;
+
+  for (const item of menuItems) {
+    const searchableText = normalizeMenuSearchText(
+      `${item.querySelector("h4").textContent} ${item.querySelector("p").textContent}`,
+    );
+    const matches = searchableText.includes(query);
+    item.hidden = !matches;
+    if (matches) matchingItems += 1;
+  }
+
+  for (const category of menuCategories) {
+    category.hidden = !category.querySelector(".menu-list li:not([hidden])");
+  }
+
+  menuSearchStatus.textContent = query
+    ? matchingItems === 0
+      ? "No menu items found."
+      : `${matchingItems} ${matchingItems === 1 ? "menu item" : "menu items"} found.`
+    : `Showing all ${menuItems.length} menu items.`;
+
+  if (menuCategorySelect) menuCategorySelect.value = "#menu";
+};
+
+if (menuSearch && menuGrid) {
+  menuSearch.addEventListener("input", updateMenuSearch);
+  updateMenuSearch();
+}
+
 if (menuCategorySelect && menuGrid) {
-  const menuCategories = [...menuGrid.querySelectorAll(".menu-category")];
   let categoryScrollFrame = 0;
 
   const updateMenuCategorySelection = () => {
@@ -113,8 +160,16 @@ if (menuCategorySelect && menuGrid) {
       return;
     }
 
-    let activeCategory = menuCategories[0];
-    for (const category of menuCategories) {
+    const visibleCategories = menuCategories.filter(
+      (category) => !category.hidden,
+    );
+    if (visibleCategories.length === 0) {
+      menuCategorySelect.value = "#menu";
+      return;
+    }
+
+    let activeCategory = visibleCategories[0];
+    for (const category of visibleCategories) {
       if (category.getBoundingClientRect().top <= activationLine) {
         activeCategory = category;
       } else {
@@ -133,6 +188,12 @@ if (menuCategorySelect && menuGrid) {
   };
 
   menuCategorySelect.addEventListener("change", () => {
+    const selectedCategory = menuCategorySelect.value;
+    if (menuSearch && menuSearch.value) {
+      menuSearch.value = "";
+      updateMenuSearch();
+      menuCategorySelect.value = selectedCategory;
+    }
     const target = document.querySelector(menuCategorySelect.value);
     if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
