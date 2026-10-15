@@ -297,14 +297,14 @@ h1 em, h2 em { color: var(--olive-light); font-weight: 400; }
   .brand-mark span { width: 6px; height: 6px; }
   .brand-name { font-size: 15px; }
   .brand-name small { font-size: 6px; }
-  .menu-toggle { width: 42px; height: 42px; display: grid; align-content: center; justify-items: center; gap: 6px; border: 1px solid var(--line-dark); background: transparent; }
+  .menu-toggle { width: 44px; height: 44px; display: grid; align-content: center; justify-items: center; gap: 6px; border: 1px solid var(--line-dark); background: transparent; }
   .menu-toggle span:not(.sr-only) { width: 17px; height: 1px; background: var(--gold); transition: transform .2s ease; }
   .menu-toggle[aria-expanded="true"] span:nth-last-child(2) { transform: translateY(3.5px) rotate(45deg); }
   .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
   .site-nav { position: absolute; top: 70px; right: 0; left: 0; padding: 20px 6% 25px; display: none; align-items: stretch; flex-direction: column; gap: 0; border-top: 1px solid var(--line-dark); background: rgba(65, 76, 57, .97); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 12px 15px rgba(40,39,31,.18); }
   .site-nav.is-open { display: flex; }
-  .site-nav > a:not(.nav-booking) { padding: 13px 0; border-bottom: 1px solid var(--line-dark); }
-  .nav-booking { margin-top: 15px; text-align: center; }
+  .site-nav > a:not(.nav-booking) { min-height: 44px; padding: 13px 0; border-bottom: 1px solid var(--line-dark); }
+  .nav-booking { min-height: 44px; margin-top: 15px; text-align: center; }
   .hero { min-height: auto; height: auto; padding: 55px 0 0; display: block; }
   .hero-copy { width: 100%; padding: 0 7% 30px; }
   .hero h1 { font-size: clamp(54px, 14vw, 75px); }
