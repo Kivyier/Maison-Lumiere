@@ -99,7 +99,6 @@ const menuGrid = document.querySelector(".menu-grid");
 const orderSummary = document.getElementById("order-summary");
 const menuCategorySelect = document.getElementById("menu-category-select");
 if (menuCategorySelect && menuGrid) {
-  const menuCategories = [...menuGrid.querySelectorAll(".menu-category")];
   let categoryScrollFrame = 0;
 
   const updateMenuCategorySelection = () => {
@@ -113,8 +112,16 @@ if (menuCategorySelect && menuGrid) {
       return;
     }
 
-    let activeCategory = menuCategories[0];
-    for (const category of menuCategories) {
+    const visibleCategories = menuCategories.filter(
+      (category) => !category.hidden,
+    );
+    if (visibleCategories.length === 0) {
+      menuCategorySelect.value = "#menu";
+      return;
+    }
+
+    let activeCategory = visibleCategories[0];
+    for (const category of visibleCategories) {
       if (category.getBoundingClientRect().top <= activationLine) {
         activeCategory = category;
       } else {
@@ -133,6 +140,12 @@ if (menuCategorySelect && menuGrid) {
   };
 
   menuCategorySelect.addEventListener("change", () => {
+    const selectedCategory = menuCategorySelect.value;
+    if (menuSearch && menuSearch.value) {
+      menuSearch.value = "";
+      updateMenuSearch();
+      menuCategorySelect.value = selectedCategory;
+    }
     const target = document.querySelector(menuCategorySelect.value);
     if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
