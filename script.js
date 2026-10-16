@@ -101,6 +101,53 @@ if (reservationForm) {
 const menuGrid = document.querySelector(".menu-grid");
 const orderSummary = document.getElementById("order-summary");
 const menuCategorySelect = document.getElementById("menu-category-select");
+const menuSearch = document.getElementById("menu-search");
+const menuSearchStatus = document.getElementById("menu-search-status");
+const menuCategories = menuGrid
+  ? [...menuGrid.querySelectorAll(".menu-category")]
+  : [];
+const menuItems = menuGrid
+  ? [...menuGrid.querySelectorAll(".menu-list li")]
+  : [];
+
+const normalizeMenuSearchText = (value) =>
+  value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase();
+
+const updateMenuSearch = () => {
+  if (!menuSearch || !menuGrid || !menuSearchStatus) return;
+
+  const query = normalizeMenuSearchText(menuSearch.value.trim());
+  let matchingItems = 0;
+
+  for (const item of menuItems) {
+    const searchableText = normalizeMenuSearchText(
+      `${item.querySelector("h4").textContent} ${item.querySelector("p").textContent}`,
+    );
+    const matches = searchableText.includes(query);
+    item.hidden = !matches;
+    if (matches) matchingItems += 1;
+  }
+
+  for (const category of menuCategories) {
+    category.hidden = !category.querySelector(".menu-list li:not([hidden])");
+  }
+
+  menuSearchStatus.textContent = query
+    ? matchingItems === 0
+      ? "No menu items found."
+      : `${matchingItems} ${matchingItems === 1 ? "menu item" : "menu items"} found.`
+    : `Showing all ${menuItems.length} menu items.`;
+
+  if (menuCategorySelect) menuCategorySelect.value = "#menu";
+};
+
+if (menuSearch && menuGrid) {
+  menuSearch.addEventListener("input", updateMenuSearch);
+  updateMenuSearch();
+}
 
 // Keep the selected menu category in sync with scrolling and selection.
 if (menuCategorySelect && menuGrid) {
