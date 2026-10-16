@@ -672,7 +672,12 @@ h1 em, h2 em {
   border-radius: 0;
   background: var(--olive);
   color: var(--ivory);
+  accent-color: var(--gold-soft);
   font: 12px var(--sans);
+}
+.menu-search input::-webkit-search-cancel-button {
+  cursor: pointer;
+  filter: invert(84%) sepia(25%) saturate(552%) hue-rotate(2deg) brightness(97%) contrast(91%);
 }
 .menu-search input::placeholder {
   color: var(--muted-light);
